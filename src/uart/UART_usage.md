@@ -12,7 +12,7 @@ Asynchronous UART
 Using EUSART1 as an example.
 
 
-### Initialisation
+### Initialisation ###
 
 ```c
 RCSTA1bits.SPEN = 1;
@@ -20,7 +20,7 @@ TRISBITS.TRISC6 = 0;
 TRISbits.TRISC7 = 0;
 ```
 
-![TXTAx](@ref TXTAx.png)
+![TXTAx](https://github.com/Curtin-Motorsport-Team/electrical-libraries/raw/master/src/uart/TXTAx.png)
 
 8 Bit transmission mode.
 Transmit disabled, for now
@@ -31,7 +31,7 @@ Asynchronous mode
 TXTA1 = 0b00000000;
 ```
 
-![RCSTAx](src/uart/RCSTAx.png)
+![RCSTAx](https://github.com/Curtin-Motorsport-Team/electrical-libraries/raw/master/src/uart/RCSTAx.png)
 
 Enable serial port.
 8 Bit reception
@@ -41,7 +41,7 @@ Enable reciever
 RCSTA1 = 0b10010000;
 ```
 
-![BAUDCONx](src/uart/BAUDCONx.png)
+![BAUDCONx](https://github.com/Curtin-Motorsport-Team/electrical-libraries/raw/master/src/uart/BAUDCONx.png)
 Non-inverted logic levels
 Lines idle high.
 16-bit baud rate
@@ -51,7 +51,7 @@ BAUDCON1 = 0b00001000;
 
 Setting the baud rate for the asynchronous operation of the chip is done with the SPBRGHx:SPBRGx register pair, such that:
 
-![Baud Table](src/uart/baudTable.png)
+![Baud Table](https://github.com/Curtin-Motorsport-Team/electrical-libraries/raw/master/src/uart/baudTable.png)
 
 As a result for a 250 kbps communication, at 16 MHz, with the 16-bit timer. The value of the SPBRGHx:SPBRGx pair must be 3.
 
